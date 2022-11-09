@@ -285,16 +285,19 @@ main {
         "nav main";
     }
   
-    .main {
+    main {
       display: grid;
       grid-template-columns: 50%;
      }
-  
-    .daily-traffic,
-    .mobile-users  {
-      grid-column: 1 / span 2;
-    }
  
+    .daily-traffic {
+        grid-column: 1 / span 1;
+      }
+      
+    .mobile-users {
+        grid-column: 2 / span 1;
+      }
+
     .dashboard,
     .traffic,
     .social,
@@ -302,6 +305,6 @@ main {
     .members-activity,
     .message,
     .settings {
-      grid-column: 1 / span 1;
+      grid-column: 1 / span 2;
     }
   }
