@@ -279,9 +279,37 @@ main {
 
   @media (min-width: 768px) {
     .grid-container {
-    grid-template-columns: 55px 1fr;
-    grid-template-areas:
-    "header header"
-    "navigation main";
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "header header"
+        "navigation main";
     }
   }
+  .main {
+    display: grid;
+  }
+
+  @media (min-width: 768) {
+    .main {
+        grid-template-columns:  50%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .daily-traffic,
+    .mobile§  {
+    grid-column: 1 / span 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .dashboard,
+    .traffic, 
+    .social,
+    .new-members,
+    .members-activity,
+    .message,
+    .settings {
+    grid-column: 1 / span 1;
+    }
+    }
