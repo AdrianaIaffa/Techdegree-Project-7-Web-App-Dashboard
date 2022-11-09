@@ -39,42 +39,6 @@ nav {
 main {
     grid-area: main;
 }
-
-/* .dashboard {
-    grid-area: dashboard;
-}
-
-.alert {
-    grid-area: alert;
-}
-
-.traffic {
-    grid-area: traffic;
-}
-
-.daily-traffic {
-    grid-area: daily-traffic;
-}
-
-.mobile-users {
-    grid-area: mobile-users;
-}
-.social {
-    grid-area: social;
-}
-.new-members {
-    grid-area: new-members;
-}
-.members-activity {
-    grid-area: members-activity;
-}
-.message {
-    grid-area: message;
-}
-.settings {
-    grid-area: settings;
-} */
-
 .top-header {
     background-color: #7d74AB;
     color: white;
@@ -107,7 +71,6 @@ main {
     align-items: center;
     gap: 40px;
     padding: 10px;
-
 }
 .icons a {
     width: 25px;
@@ -141,8 +104,7 @@ main {
 .new-members,
 .members-activity,
 .message,
-.settings
- {
+.settings {
    padding: 10px;
    border-bottom: 2px solid #B0ACC6;
 }
@@ -164,7 +126,6 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
 }
 .social-stats {
     display: flex;
@@ -199,7 +160,6 @@ main {
     line-height: 1.5em;
     padding-bottom: 10px;
     margin: 20px;
-    
 }
 
 .widget-container {
@@ -234,6 +194,7 @@ main {
     width: 100%;
     gap: 10%;
 }
+
 #save {
     align-items: center;
     justify-content: flex-start;
@@ -242,7 +203,6 @@ main {
     color: white;
     background-color: #7d74AB;
     border: 1px solid #B0ACC6;
-
     border-radius: 5px;
 }
 #cancel {
@@ -301,7 +261,6 @@ main {
     right: 10%;
     top: 18%;
     color: white;
-    
   }
   
   .toggle-on-off input:checked::before {
@@ -315,7 +274,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    
   }
 
 
+  @media (min-width: 768px) {
+    .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+    "header header"
+    "navigation main";
+    }
+  }
