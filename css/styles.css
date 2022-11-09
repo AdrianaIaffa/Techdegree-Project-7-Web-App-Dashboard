@@ -288,7 +288,7 @@ main {
     .main {
       display: grid;
       grid-template-columns: 50%;
-    }
+     }
   
     .daily-traffic,
     .mobile-users  {
