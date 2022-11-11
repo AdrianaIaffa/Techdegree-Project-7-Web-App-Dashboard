@@ -162,6 +162,11 @@ main {
     margin: 20px;
 }
 
+.members-container a {
+    color: #7d74AB;
+    font-weight: bold;
+}
+
 .widget-container {
     display: flex;
     flex-direction: column;
@@ -277,6 +282,17 @@ main {
   }
 
 
+  .alert-banner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #7d74AB;
+    color: white;
+    margin: 20px;
+    border-radius: 10px;
+    
+}
+
   @media (min-width: 768px) {
     .grid-container {
       grid-template-columns: 70px 1fr;
@@ -298,6 +314,7 @@ main {
         grid-column: 2 / span 1;
       }
 
+    .alert-banner,   
     .dashboard,
     .traffic,
     .social,
@@ -307,4 +324,60 @@ main {
     .settings {
       grid-column: 1 / span 2;
     }
-  }
+
+    .bell-logo,
+    .profile-image,
+    .top-header h3 {
+        justify-content: right;
+    }
+    .icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .daily-traffic {
+        border-right: 2px solid #B0ACC6;
+    }
+    .social {
+        width: 100%;
+    }
+    .social-stats {
+        display: inline-flex;
+        justify-content: center;
+        width: 32.9%;
+    }
+
+    .members-container {
+        flex-direction: row;
+    }
+    
+    .members-text {
+        align-items: flex-start;
+        width: 100%;
+    }
+    .members-container img {
+        margin-right: 20px;
+    }
+}
+
+    @media (min-width: 1024px) {
+        .new-members,
+        .message {
+            grid-column: 1 / span 1;
+            border-right: 2px solid #B0ACC6;
+        }
+
+        .members-activity,
+        .settings {
+            grid-column: 2 / span 1;
+        }
+        .form-area {
+            height: 115px;
+        }
+        #save,
+        #cancel,
+        #send {
+            height: 50px;
+        }
+    }
