@@ -283,6 +283,7 @@ main {
 
 
   .alert-banner {
+    grid-column: span 2;
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -314,7 +315,7 @@ main {
         grid-column: 2 / span 1;
       }
 
-    .alert-banner,   
+     #alert,
     .dashboard,
     .traffic,
     .social,
