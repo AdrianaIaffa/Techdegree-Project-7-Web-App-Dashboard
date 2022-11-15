@@ -1,3 +1,14 @@
+:root {
+    --brown: #615756;
+    --dark-brown: #231E1E;
+    --mid-brown: #908382;
+    --light-brown: #BFB1B0;
+    --white: #fff;
+}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -40,8 +51,8 @@ main {
     grid-area: main;
 }
 .top-header {
-    background-color: #7d74AB;
-    color: white;
+    background-color: var(--brown);
+    color: var(--white);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,14 +68,14 @@ main {
 }
 
 .bell-logo {
-  border-right: 1px solid white;
+  border-right: 1px solid var(--white);
   width: 25px;
-  fill: white;
+  fill: var(--white);
   padding-right: 10px;
 }
 
 .icons {
-    background-color: #1b1247;
+    background-color: var(--dark-brown);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -75,7 +86,7 @@ main {
 .icons a {
     width: 25px;
     height: 25px;
-    fill:  white;
+    fill:  var(--white);
     cursor: pointer;
 }
 
@@ -90,9 +101,9 @@ main {
     width: 40%
 }
 .tab {
-    background: #F4F3FB;
-    border-left: 2px solid #B0ACC6;
-    border-bottom: 2px solid #B0ACC6;
+    background: var(--light-brown);
+    border-left: 2px solid var(--mid-brown);
+    border-bottom: 2px solid var(--mid-brown);
     border-bottom-left-radius: 5px;
     height: 70px;
     width: 60%;
@@ -106,7 +117,7 @@ main {
 .message,
 .settings {
    padding: 10px;
-   border-bottom: 2px solid #B0ACC6;
+   border-bottom: 2px solid var(--mid-brown);
 }
 .traffic-header h3,
 .daily-traffic h3,
@@ -132,15 +143,15 @@ main {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    border: 2px solid #B0ACC6;
+    border: 2px solid var(--mid-brown);
     border-radius: 5px;
     padding: 10px;
-    background: #F4F3FB;
+    background: var(--light-brown);
     margin-bottom: 10px;
 }
 .social-image {
     width: 25px;
-    fill: #7d74AB;
+    fill: var(--brown);
 }
 .social-text {
     padding-left: 10px;
@@ -156,14 +167,14 @@ main {
     align-items: center;
 }
 .members-container {
-    border-bottom: 1px solid #B0ACC6;
+    border-bottom: 1px solid var(--mid-brown);
     line-height: 1.5em;
     padding-bottom: 10px;
     margin: 20px;
 }
 
 .members-container a {
-    color: #7d74AB;
+    color: var(--brown);
     font-weight: bold;
 }
 
@@ -180,17 +191,17 @@ main {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #B0ACC6;
+    border: 2px solid var(--mid-brown);
     border-radius: 5px;
-    background-color: #F4F3FB;
+    background-color: var(--light-brown);
 }
 .widget-container input::placeholder,
 .widget-container textarea::placeholder {
-    color: #B0ACC6;
+    color: var(--brown);
 }
 #send {
-    color: white;
-    background-color: #7d74AB;
+    color: var(--white);
+    background-color: var(--brown);
 }
 
 .settings-button {
@@ -206,8 +217,8 @@ main {
     width: 45%;
     padding: 20px;
     color: white;
-    background-color: #7d74AB;
-    border: 1px solid #B0ACC6;
+    background-color: var(--brown);
+    border: 1px solid var(--mid-brown);
     border-radius: 5px;
 }
 #cancel {
@@ -215,8 +226,8 @@ main {
     justify-content: flex-end;
     width: 45%; 
     color: white;
-    background-color: #d9d8df;
-    border: 1px solid #B0ACC6;
+    background-color: var(--light-brown);
+    border: 1px solid var(--mid-brown);
     border-radius: 5px;
 }
 .settings-toggle {
@@ -232,8 +243,8 @@ main {
     width: 90px;
     height: 30px;
     border-radius: 25px;
-    background-color: #d9d8df;
-    border: 2px solid #B0ACC6;
+    background-color: var(--light-brown);
+    border: 2px solid var(--mid-brown);
     transition: background .3s;
     outline: none;
     cursor: pointer;
@@ -247,13 +258,13 @@ main {
     border-radius: 50%;
     height: 1.25rem;
     width: 1.25rem;
-    background-color: white;
-    border: 2px solid #B0ACC6;
+    background-color: var(--white);
+    border: 2px solid var(--mid-brown);
     transition: left .3s;
 }
 
 .toggle-on-off input:checked {
-    background-color: #7d74AB;
+    background-color: var(--brown);
 }
 
 .toggle-on-off input:checked::after {
@@ -265,7 +276,7 @@ main {
     position: absolute;
     right: 10%;
     top: 18%;
-    color: white;
+    color: var(--white);
   }
   
   .toggle-on-off input:checked::before {
@@ -273,7 +284,7 @@ main {
     position: absolute;
     left: 5%;
     top: 15%;
-    color: white;
+    color: var(--white);
   }
   .toggle-on-off {
     display: flex;
@@ -287,8 +298,8 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #7d74AB;
-    color: white;
+    background-color: var(--brown);
+    color: var(--white);
     margin: 20px;
     border-radius: 10px;
     
@@ -342,7 +353,7 @@ main {
     }
 
     .daily-traffic {
-        border-right: 2px solid #B0ACC6;
+        border-right: 2px solid var(--mid-brown);
     }
     .social {
         width: 100%;
@@ -370,7 +381,7 @@ main {
         .new-members,
         .message {
             grid-column: 1 / span 1;
-            border-right: 2px solid #B0ACC6;
+            border-right: 2px solid var(--mid-brown);
         }
 
         .members-activity,
