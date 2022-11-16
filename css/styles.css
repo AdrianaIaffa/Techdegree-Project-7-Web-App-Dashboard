@@ -3,11 +3,9 @@
     --dark-brown: #231E1E;
     --mid-brown: #908382;
     --light-brown: #BFB1B0;
+    --light-green: #D1D7C8;
     --white: #fff;
 }
-
-
-
 
 * {
     margin: 0;
@@ -62,17 +60,59 @@ main {
     gap: 10px;
 }
 
+.header-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-img {
+    border-left: 1px solid var(--white);
+    padding-right: 10px;
+}
 .profile-image {
+    margin-left: 10px;
     border-radius: 50%;
     width: 50px;
 }
 
 .bell-logo {
-  border-right: 1px solid var(--white);
-  width: 25px;
+  display: flex;
+  width: 50px;
   fill: var(--white);
   padding-right: 10px;
 }
+
+.bell-logo:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.notification {
+    background-color: lime;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    
+}
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 
 .icons {
     background-color: var(--dark-brown);
@@ -93,6 +133,7 @@ main {
 .dashboard {
     display: flex;
     align-items: center;
+    font-size: 0.75em;
     height: 70px;
     width: 100%;
 }
@@ -100,8 +141,9 @@ main {
     padding: 0 10px;
     width: 40%
 }
+
 .tab {
-    background: var(--light-brown);
+    background: var(--light-green);
     border-left: 2px solid var(--mid-brown);
     border-bottom: 2px solid var(--mid-brown);
     border-bottom-left-radius: 5px;
@@ -146,12 +188,25 @@ main {
     border: 2px solid var(--mid-brown);
     border-radius: 5px;
     padding: 10px;
-    background: var(--light-brown);
+    background: var(--light-green);
     margin-bottom: 10px;
 }
+.social-text {
+    color: var(--brown);
+}
+.followers {
+    font-size: 1.5em;
+}
 .social-image {
-    width: 25px;
-    fill: var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--brown);
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    background-color: var(--brown);
+    fill: var(--white);
 }
 .social-text {
     padding-left: 10px;
@@ -193,7 +248,7 @@ main {
     margin-bottom: 10px;
     border: 2px solid var(--mid-brown);
     border-radius: 5px;
-    background-color: var(--light-brown);
+    background-color: var(--light-green);
 }
 .widget-container input::placeholder,
 .widget-container textarea::placeholder {
@@ -302,7 +357,10 @@ main {
     color: var(--white);
     margin: 20px;
     border-radius: 10px;
-    
+}
+
+.alert-banner-close {
+    cursor: pointer;
 }
 
 .arrow {
@@ -341,15 +399,29 @@ main {
       grid-column: 1 / span 2;
     }
 
-    .bell-logo,
-    .profile-image,
-    .top-header h3 {
+   .header-text {
+        display: flex;
+        align-items: center;
         justify-content: right;
-    }
+        gap: 30px;
+   }
     .icons {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+    }
+
+    /* .dashboard {
+        font-size: 1.5em;
+        justify-content: center;
+    } */
+
+    .headline {
+        width: 20%;
+    }
+
+    .tab {
+        width: 80%;
     }
 
     .daily-traffic {
@@ -375,9 +447,19 @@ main {
     .members-container img {
         margin-right: 20px;
     }
+
+    .arrow {
+        display: inline;
+    }
 }
 
     @media (min-width: 1024px) {
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         .new-members,
         .message {
             grid-column: 1 / span 1;
