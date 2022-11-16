@@ -180,6 +180,16 @@ main {
     justify-content: space-evenly;
     align-items: center;
 }
+
+.traffic-graph {
+    width: 90vw;
+}
+
+.bar-graph-traffic,
+.doughnut-graph-mobile {
+    width: 40vw;
+}
+
 .social-stats {
     display: flex;
     justify-content: flex-start;
