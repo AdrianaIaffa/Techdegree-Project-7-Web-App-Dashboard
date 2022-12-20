@@ -477,6 +477,10 @@ main {
         .settings {
             grid-column: 2 / span 1;
         }
+
+       .members-container {
+        height: 120px;
+       }
         .form-area {
             height: 115px;
         }
